@@ -1,0 +1,337 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', monospace;
+}
+
+:root {
+    --primary-bg: #0a0a0a;
+    --secondary-bg: #121212;
+    --terminal-bg: #0c0c0c;
+    --terminal-header: #1a1a1a;
+    --neon-green: #0f0;
+    --neon-green-glow: 0 0 5px #0f0, 0 0 10px #0f0;
+    --neon-blue: #0ff;
+    --neon-blue-glow: 0 0 5px #0ff, 0 0 10px #0ff;
+    --text-color: #ddd;
+    --highlight: #00ff9c;
+}
+
+body {
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    position: relative;
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    position: relative;
+}
+
+.logo i {
+    font-size: 2rem;
+    color: var(--neon-blue);
+    margin-right: 10px;
+    text-shadow: var(--neon-blue-glow);
+}
+
+h1 {
+    font-size: 2.5rem;
+    background: linear-gradient(to right, var(--neon-blue), var(--highlight));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+}
+
+/* Matrix Rain Animation */
+.matrix-rain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.2;
+}
+
+/* Blinking cursor effect */
+.blink {
+    animation: blink 1s infinite;
+    font-weight: bold;
+    color: var(--neon-green);
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Terminal styling */
+.terminal {
+    background-color: var(--terminal-bg);
+    border-radius: 5px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 255, 0, 0.1);
+    overflow: hidden;
+    border: 1px solid #333;
+}
+
+.terminal-header {
+    background-color: var(--terminal-header);
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+}
+
+.terminal-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.red { background-color: #ff5f57; }
+.yellow { background-color: #febc2e; }
+.green { background-color: #28c840; }
+
+.terminal-title {
+    margin-left: 10px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+.terminal-body {
+    padding: 15px;
+    font-family: 'Courier New', monospace;
+}
+
+.line {
+    margin-bottom: 10px;
+}
+
+.prompt {
+    color: var(--neon-green);
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.command {
+    color: white;
+}
+
+.output {
+    color: #aaa;
+    margin: 10px 0 20px 20px;
+    line-height: 1.4;
+}
+
+.highlight {
+    color: var(--neon-blue);
+    font-weight: bold;
+    text-shadow: var(--neon-blue-glow);
+}
+
+.highlight-green {
+    color: var(--neon-green);
+    font-weight: bold;
+    text-shadow: var(--neon-green-glow);
+}
+
+/* Loading animation */
+.loading {
+    margin-top: 10px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.progress {
+    width: 0;
+    height: 100%;
+    background: linear-gradient(to right, var(--neon-green), var(--neon-blue));
+    animation: load 2s forwards;
+}
+
+@keyframes load {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+
+/* PDF Container */
+.pdf-container {
+    background-color: var(--secondary-bg);
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.1);
+    border: 1px solid #333;
+}
+
+.pdf-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.pdf-header h2 {
+    color: var(--neon-blue);
+    text-shadow: var(--neon-blue-glow);
+    font-size: 1.5rem;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.controls button {
+    background-color: #1a1a1a;
+    color: var(--text-color);
+    border: 1px solid #444;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.controls button:hover {
+    background-color: #2a2a2a;
+    color: var(--neon-green);
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+}
+
+.pdf-viewer {
+    width: 100%;
+    height: 600px;
+    overflow: auto;
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+}
+
+#pdf-render {
+    margin: 0 auto;
+    display: block;
+}
+
+.pdf-placeholder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background-color: #1a1a1a;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.pdf-placeholder i {
+    font-size: 4rem;
+    color: var(--neon-green);
+    margin-bottom: 20px;
+    text-shadow: var(--neon-green-glow);
+}
+
+.pdf-placeholder p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.pdf-placeholder .small {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-top: 10px;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #333;
+    margin-top: 30px;
+}
+
+footer p {
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+.typing-effect {
+    margin-top: 10px;
+    height: 20px;
+}
+
+.cursor {
+    animation: blink 1s infinite;
+    color: var(--neon-green);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .pdf-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .controls {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .pdf-viewer {
+        height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .logo i {
+        font-size: 1.5rem;
+    }
+    
+    .controls {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    
+    .controls button {
+        padding: 4px 8px;
+        font-size: 0.9rem;
+    }
+}

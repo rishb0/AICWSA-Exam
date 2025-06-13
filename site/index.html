@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArmourInfosec Exam Portal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- PDF.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.4.120/build/pdf.min.js"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h1>ArmourInfosec<span class="blink">_</span></h1>
+            </div>
+            <div class="matrix-rain" id="matrix-canvas"></div>
+        </header>
+
+        <main>
+            <div class="terminal">
+                <div class="terminal-header">
+                    <span class="terminal-dot red"></span>
+                    <span class="terminal-dot yellow"></span>
+                    <span class="terminal-dot green"></span>
+                    <span class="terminal-title">student_info.sh</span>
+                </div>
+                <div class="terminal-body">
+                    <div class="line">
+                        <span class="prompt">$</span> <span class="command">cat student_profile.json</span>
+                    </div>
+                    <div class="output">
+                        {<br>
+                        &nbsp;&nbsp;"name": "<span class="highlight">Rishabh Soni</span>",<br>
+                        &nbsp;&nbsp;"status": "<span class="highlight-green">Active</span>",<br>
+                        &nbsp;&nbsp;"institute": "<span class="highlight">ArmourInfosec</span>",<br>
+                        &nbsp;&nbsp;"exam_in_progress": true,<br>
+                        &nbsp;&nbsp;"access_level": "student"<br>
+                        }
+                    </div>
+                    <div class="line">
+                        <span class="prompt">$</span> <span class="command">load_report.sh</span>
+                    </div>
+                    <div class="output loading">
+                        <span>Loading report...</span>
+                        <div class="progress-bar">
+                            <div class="progress"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pdf-container">
+                <div class="pdf-header">
+                    <h2>Student Report <span class="blink">_</span></h2>
+                    <div class="controls">
+                        <button id="prev">Previous</button>
+                        <span id="page-num"></span> / <span id="page-count"></span>
+                        <button id="next">Next</button>
+                        <button id="zoom-in"><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+                        <button id="zoom-out"><i class="fa-solid fa-magnifying-glass-minus"></i></button>
+                    </div>
+                </div>
+                <div class="pdf-viewer">
+                    <canvas id="pdf-render"></canvas>
+                </div>
+                <div class="pdf-placeholder">
+                    <i class="fa-solid fa-file-pdf"></i>
+                    <p>PDF report will be loaded here</p>
+                    <p class="small">PDF path needs to be configured in js/pdf-viewer.js</p>
+                    <p class="small">Edit the getPdfPath() function with your PDF file location</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2023 ArmourInfosec. All systems monitored. Unauthorized access prohibited.</p>
+            <div class="typing-effect">
+                <span id="typing-text"></span><span class="cursor">|</span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/pdf-viewer.js"></script>
+</body>
+</html>
