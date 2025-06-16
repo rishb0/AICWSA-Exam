@@ -40,7 +40,8 @@ Your organization is enhancing its Windows Server infrastructure by configuring 
 - **Hostname**: server1
 - **Domain**: ai.exam
 
-![image](https://github.com/user-attachments/assets/cb57d148-71f3-44da-b9e7-ed70cd4ae744)
+![image](https://github.com/user-attachments/assets/94cb9395-68f1-47bc-8654-1573accd5d3b)
+
 
 
 ### Client 1
@@ -49,7 +50,8 @@ Your organization is enhancing its Windows Server infrastructure by configuring 
 - **Password**: ex@m@Dev1
 - **Hostname**: pc1
 
-![image](https://github.com/user-attachments/assets/5feb31c6-7b19-4873-a5a7-b375501b5d51)
+![image](https://github.com/user-attachments/assets/1a842815-2342-4f72-b360-4d809717903e)
+
 
 ### Client 2
 - **Operating System**: Windows 11
@@ -57,7 +59,7 @@ Your organization is enhancing its Windows Server infrastructure by configuring 
 - **Password**: ex@m@Max1
 - **Hostname**: pc2
 
-  ![image](https://github.com/user-attachments/assets/60d9b66c-7950-460c-9641-220361d85b12)
+![image](https://github.com/user-attachments/assets/fb437b33-bcda-492b-9ac6-47ba8d7ea916)
   
 ---
 
@@ -75,11 +77,11 @@ Your organization is enhancing its Windows Server infrastructure by configuring 
   - **Default Gateway**: 192.168.1.1
   - **DNS Server**: 192.168.1.100
 
-  ![image](https://github.com/user-attachments/assets/d262bcfd-2e11-40de-9e62-a2c62f35ea64)
+![image](https://github.com/user-attachments/assets/f430542f-f578-41aa-abb3-42ce4071c0b0)
 
 - **Automatic DNS Updates**: Configured to automatically update DNS records for DHCP clients.
 
-	![image](https://github.com/user-attachments/assets/904a5079-83a9-463f-b504-f1bc1c09ba46)
+![image](https://github.com/user-attachments/assets/205212b4-0428-4cd0-a3a6-f3053aaaf193)
 
 ---
 
@@ -92,7 +94,7 @@ Your organization is enhancing its Windows Server infrastructure by configuring 
   - **CNAME Record**: 
     - www → ai.exam
     
-  ![image](https://github.com/user-attachments/assets/8686aa2c-81db-4cb4-97fc-32a633942812)
+![image](https://github.com/user-attachments/assets/481f0d6c-32e8-4c4b-bea6-5d8ecef195e1)
 
 ---
 
@@ -100,26 +102,27 @@ Your organization is enhancing its Windows Server infrastructure by configuring 
 - **Roles Added**: 
   - Web Server (IIS)
 
-	![image](https://github.com/user-attachments/assets/379bf09f-3941-4565-984c-586d4b2d3a6c)
+![image](https://github.com/user-attachments/assets/fe2f023d-3737-437c-a7c2-1988859949a8)
 
-  ![image](https://github.com/user-attachments/assets/27c679c3-72fa-49ea-bbae-89eadd39462d)
+![image](https://github.com/user-attachments/assets/f45e0f01-3197-47d8-aabc-b02e5b9f49cc)
 
 - **Website Name**: ai.exam
 - **Physical Path**: C:\inetpub\ai.exam
 
-  ![image](https://github.com/user-attachments/assets/e8359521-ebb7-4778-9757-e70ac1b612a8)
+![image](https://github.com/user-attachments/assets/e40f6410-5af4-4443-8834-fcffdeeaad32)
 
 - **Bindings**: 
   - HTTP: Port 80
   - HTTPS: Port 443
 
-  ![image](https://github.com/user-attachments/assets/7c5cca8d-fdd7-4e65-a3ce-a8b5540c67f7)
+![image](https://github.com/user-attachments/assets/5b866af9-124d-4eda-bf21-452bf013dffc)
 
 - **HTTP Redirection**: Redirects all HTTP requests to HTTPS.
 
-  ![image](https://github.com/user-attachments/assets/34482f59-17ef-44d5-8b20-613bebb12c89)
+![image](https://github.com/user-attachments/assets/8a1f895c-de46-45fa-a66f-bc1006908716)
 
-	![image](https://github.com/user-attachments/assets/24179358-5911-40cf-a4af-b1496e4a302b)
+![image](https://github.com/user-attachments/assets/c96b2f0a-e93e-4d31-b33b-cc216c2c9963)
+
 ---
 
 ## Top Group Policies on the Sales OU
@@ -149,7 +152,7 @@ Your organization is enhancing its Windows Server infrastructure by configuring 
 ## Firewall Configuration
 - **Inbound Rules**:
 
-![image](https://github.com/user-attachments/assets/d35c579f-d033-4702-8d6b-07d17104ea2a)
+![image](https://github.com/user-attachments/assets/6085bf22-6d9f-455b-83db-9d6e364c5302)
 
   - DHCP Server: Allowed
   - DNS Server TCP/UDP: Allowed
@@ -165,31 +168,31 @@ Your organization is enhancing its Windows Server infrastructure by configuring 
   - Successful ping tests were conducted between clients and the server, confirming network connectivity.
     - **Client 1 (pc1)** to **Server**: Successful
     
-  ![image](https://github.com/user-attachments/assets/37e16010-6c05-4a89-a7d5-1843177cdd93)
+![image](https://github.com/user-attachments/assets/ef4d03a5-e833-4031-bc28-f2a77fc44e19)
 
     - **Client 2 (pc2)** to **Server**: Successful
 		
-  ![image](https://github.com/user-attachments/assets/4444a77b-fe94-4b10-b4c3-fe04ddd68308)
+![image](https://github.com/user-attachments/assets/04d80104-3c7f-4b83-99cf-509a5ad367ae)
 
 - **NSLookup**: 
   - Successful DNS resolution for the following domains:
     - **ai.exam**: Resolved to `192.168.1.100`
     - **www.ai.exam**: Resolved to `192.168.1.100`
 
-![image](https://github.com/user-attachments/assets/c1e47094-99be-4db3-b444-99ba8eb5c2c7)
+![image](https://github.com/user-attachments/assets/86dc87bd-63f0-4bd2-8026-b698dab89531)
 
 - **Web Access**: 
   - Successful access to the website **ai.exam** via:
     - **HTTP**: Accessed at `http://ai.exam`
     - **HTTPS**: Accessed at `https://ai.exam`
 
-      ![image](https://github.com/user-attachments/assets/e64671b8-72ab-40d9-9cba-3443d9f79eab)
+![image](https://github.com/user-attachments/assets/11ff1821-d47e-4550-8a93-4cfb8779456f)
       
     - **www.ai.exam via:
       - **HTTP**: Accessed at `http://www.ai.exam`
       - **HTTPS**: Accessed at `https://www.ai.exam`
 
-        ![image](https://github.com/user-attachments/assets/87e350e7-3e9d-4daf-a42e-2126c62fd2e4)
+![image](https://github.com/user-attachments/assets/2f7dd071-077e-4e84-b071-bb8df19e5b51)
          
 ---
 ## Local Account Passwords
