@@ -12,7 +12,7 @@ I successfully completed the AICWSA (Armour Infosec Certified Windows Server Adm
 ## Report
 
 Full technical documentation of the exam and configurations:  
-[Exam Report](https://github.com/rishb0/Windows-Server-Admin-Exam/blob/main/index.md)
+[Exam Report](https://github.com/rishb0/AICWSA-Exam/blob/main/index.md)
 
 ## Certificate
 
