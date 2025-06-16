@@ -12,17 +12,20 @@ title: AICWSA Exam Report
 ---
 
 ## Table of Contents
-1. **Question**  
-2. **Machine Details**  
-   - Server  
-   - Client 1  
-   - Client 2  
-3. **DHCP Configuration**  
-4. **DNS Configuration**  
-5. **IIS Web Hosting**  
-6. **Top Group Policies on the Sales OU**  
-7. **Firewall Configuration**  
-8. **Images**  
+1. [Question](#question)
+2. [Machine Details](#machine-details)
+   - [Server](#server)
+   - [Client 1](#client-1)
+   - [Client 2](#client-2)
+3. [DHCP Configuration](#dhcp-configuration)
+4. [DNS Configuration](#dns-configuration)
+5. [IIS Web Hosting](#iis-web-hosting)
+6. [Top Group Policies on the Sales OU](#top-group-policies-on-the-sales-ou)
+7. [Firewall Configuration](#firewall-configuration)
+8. [Connectivity Tests](#connectivity-tests)
+9. [Local Account Passwords](#local-account-passwords)
+10. [ADDS Usernames and Passwords](#adds-usernames-and-passwords)
+11. [Conclusion](#conclusion)
 
 ---
 
